@@ -57,7 +57,7 @@ You'll notice some of the taxonomy in referring to files such as `ROOT:filename`
 
 ## Network Schema
 
-10.10.10.1/24 - Main Subnet (Server will build here as 10.10.10.69 (Nice))
+10.10.10.0/24 - Main Subnet (Server will build here as 10.10.10.69 (Nice))
 
 The server will currently build as a `t3.medium`. I've tested this up to 4 concurrent players without surpassing 25% CPU utilization.  Depending on the size of the world and how many users, you may need to adjust the size. With Terraform, it should be as simple as updating the line of code in `ROOT:main.tf` line 34 with the new sizing and re-running `terraform apply`. Make sure you stop the server and backup before doing it, just in case.
 
