@@ -65,7 +65,7 @@ The server will currently build as a `t3.medium`. I've tested this up to 4 concu
 
 Author: Elijah Gartin (Falkon)
 
-- [Website](https://ww.thunderrockgaming.com)
+- [Website](https://www.thunderrockgaming.com)
 - [Discord](https://discord.gg/Trwr3Ty)
 - [Falkon Twitch](https://twitch.tv/FalkonTTV)
 
