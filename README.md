@@ -64,12 +64,14 @@ The server will currently build as a `t3.medium`. I've tested this up to 4 concu
 ## Support for Infrastructure as Code
 
 Author: Elijah Gartin (Falkon)
-(Website)[www.thunderrockgaming.com]
-(Discord)[https://discord.gg/Trwr3Ty]
-(Falkon Twitch)[https://twitch.tv/FalkonTTV]
+
+- (Website)[www.thunderrockgaming.com]
+- (Discord)[https://discord.gg/Trwr3Ty]
+- (Falkon Twitch)[https://twitch.tv/FalkonTTV]
 
 ## Support for Valheim Server Scripts
 
 Author: ZeroBandwith (And Many More)
-(ZeroBandwith Discord)[https://discord.gg/ejgQUfc]
-(ZeroBandwith Github Repo)[https://github.com/Nimdy/Dedicated_Valheim_Server_Script.git]
+
+- (ZeroBandwith Discord)[https://discord.gg/ejgQUfc]
+- (ZeroBandwith Github Repo)[https://github.com/Nimdy/Dedicated_Valheim_Server_Script.git]
