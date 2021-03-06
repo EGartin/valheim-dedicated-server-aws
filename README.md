@@ -12,7 +12,7 @@ All use of these tools are the sole responsibility of the user applying the buil
 
 This repository is to build a Valheim Dedicated Server from Amazon Web Services.  We assume you know how to use Amazon Web Services.
 
-Pulling from Ubuntu Server immutable images and a dynamic Valheim Build library created by ZeroBandwidth and associates. (Application Build Github)[https://github.com/Nimdy/Dedicated_Valheim_Server_Script.git]. 
+Pulling from Ubuntu Server immutable images and a dynamic Valheim Build library created by ZeroBandwidth and associates. [Application Build Github](https://github.com/Nimdy/Dedicated_Valheim_Server_Script.git). 
 
 I do have some ambitions to try and create something like this for all the major cloud providers. All critiques are welcome via the Github Issue tracker or through discord.
 
@@ -24,7 +24,7 @@ I do have some ambitions to try and create something like this for all the major
       - EC2
       - VPC
       - S3
-  - (Terraform)[https://www.terraform.io/downloads.html] (Tested on version 0.14.5)
+  - [Terraform](https://www.terraform.io/downloads.html) (Tested on version 0.14.5)
   - EC2 SSH Keypair
 
 ## Steps
@@ -37,7 +37,7 @@ You'll notice some of the taxonomy in referring to files such as `ROOT:filename`
 
 2. Make sure you have a keypair already made in your `EC2 > Network & Security > Key Pairs` area so you can put the name of the key in the locals in `ROOT:main.tf`.  You don't need to include the .pem or .ppk extension.
 
-3. Edit the `ROOT:provider.tf` file to choose the data center you want to deploy in. (AWS EndPoints)[https://docs.aws.amazon.com/general/latest/gr/rande.html].  Input your API key here if you aren't going to push or share this code, otherwise save your credentials in a credential file or in your OS environment variables for security purposes. (Read more about Terraform and AWS credentials here)[https://registry.terraform.io/providers/hashicorp/aws/latest/docs]
+3. Edit the `ROOT:provider.tf` file to choose the data center you want to deploy in. [AWS EndPoints](https://docs.aws.amazon.com/general/latest/gr/rande.html).  Input your API key here if you aren't going to push or share this code, otherwise save your credentials in a credential file or in your OS environment variables for security purposes. [Read more about Terraform and AWS credentials here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 
 4. Once you've saved all your changes, open a terminal/command prompt to the location of this repository and run the following commands in succession:
   - `terraform init`
@@ -65,13 +65,13 @@ The server will currently build as a `t3.medium`. I've tested this up to 4 concu
 
 Author: Elijah Gartin (Falkon)
 
-- (Website)[www.thunderrockgaming.com]
-- (Discord)[https://discord.gg/Trwr3Ty]
-- (Falkon Twitch)[https://twitch.tv/FalkonTTV]
+- [Website](www.thunderrockgaming.com)
+- [Discord](https://discord.gg/Trwr3Ty)
+- [Falkon Twitch](https://twitch.tv/FalkonTTV)
 
 ## Support for Valheim Server Scripts
 
 Author: ZeroBandwith (And Many More)
 
-- (ZeroBandwith Discord)[https://discord.gg/ejgQUfc]
-- (ZeroBandwith Github Repo)[https://github.com/Nimdy/Dedicated_Valheim_Server_Script.git]
+- [ZeroBandwith Discord](https://discord.gg/ejgQUfc)
+- [ZeroBandwith Github Repo](https://github.com/Nimdy/Dedicated_Valheim_Server_Script.git)
