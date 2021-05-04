@@ -6,8 +6,8 @@
 */
 
 provider aws {
-    region = "us-west-1"
+    region = "REGION CODE"
     #Only use these if you are secure and not sharing your code. Otherwise use more secure methods discussed in README.md
-    access_key = "AKIAU4YHFS7M2HIVQ5LW"
-    secret_key = "5lb52X6+zrUcMXDABlY/3cDRGQVOA+/lPfmnThu0"
+    access_key = "ACCESS_KEY"
+    secret_key = "SECRET_KEY"
 }
