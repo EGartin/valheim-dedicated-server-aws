@@ -39,6 +39,10 @@ You'll notice some of the taxonomy in referring to files such as `ROOT:filename`
 
 3. Edit the `ROOT:provider.tf` file to choose the data center you want to deploy in. [AWS EndPoints](https://docs.aws.amazon.com/general/latest/gr/rande.html).  Input your API key here if you aren't going to push or share this code, otherwise save your credentials in a credential file or in your OS environment variables for security purposes. [Read more about Terraform and AWS credentials here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 
+  - If you want to use the spot instance reduced cost configuration:
+    - In `ROOT:Main.tf` comment out the `module:server` block in  from lines 32 to 45. Subsequently, uncomment the `module:spotserver` right underneath it from lines 48 to 62.
+    - In `ROOT:output.tf` comment out lines 9 through 11 and uncomment lines 14-16
+
 4. Once you've saved all your changes, open a terminal/command prompt to the location of this repository and run the following commands in succession:
   - `terraform init`
   - `terraform apply`

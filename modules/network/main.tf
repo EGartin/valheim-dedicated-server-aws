@@ -41,7 +41,7 @@ resource "aws_subnet" "valheim-subnets-10"{
   availability_zone = element(data.aws_availability_zones.azs.names,count.index)
   vpc_id = aws_vpc.valheim-vpc.id
   cidr_block = element(var.valheim-subnet-10,count.index)
-  
+  map_public_ip_on_launch = true
   depends_on = [aws_internet_gateway.gw]
 
   tags = {

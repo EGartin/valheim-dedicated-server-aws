@@ -1,7 +1,7 @@
 /*
 * PROJECT: Valheim Dedicated Server
 * FILE: DEDICATED-SERVER :: Main.tf
-* AUTHOR: Elijah Gartin [elijah.gartin@gmail.com]
+* AUTHOR: Elijah Gartin
 * DATE: 2021 MAR 05
 */
 
@@ -24,14 +24,15 @@ data "aws_ami" "latest-ubuntu" {
 }
 
 
-resource "aws_instance" "instance" {
+resource "aws_spot_instance_request" "instance" {
     ami = data.aws_ami.latest-ubuntu.id
     instance_type = var.instance_type
-    ebs_optimized = "true"
     subnet_id = var.subnet_id
-    private_ip = var.private_ip
+    #private_ip = var.private_ip
     vpc_security_group_ids = var.security_groups
     key_name = var.key_name
+    wait_for_fulfillment = true
+    spot_type = "persistent"
     tags = {
         Name = var.name_tag
         Environment = var.env_type
@@ -59,13 +60,3 @@ resource "aws_instance" "instance" {
     }
 }
 
- 
-#Dedicated IP 
-#EIP
-/*
-resource "aws_eip" "eip"{
-    vpc = true
-
-    instance = aws_instance.instance.id
-}
-*/

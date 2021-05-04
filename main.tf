@@ -44,3 +44,20 @@ module "server" {
     user_data               = file("./scripts/bootstrap.sh")   
 }
 
+
+/*
+module "spotserver" {
+    source                  = "./modules/dedicated-server-spot"
+    instance_type           = "t3.medium"
+    volume_size             = "30"
+    volume_type             = "gp2"
+    subnet_id               = module.network.network_subnet_id
+    security_groups         = module.securitygroups.valheim_security_groups
+    iam_instance_profile    = module.iam.ec2_s3_read_access
+    key_name                = local.keyname
+    env_type                = local.env_type
+    name_tag                = "Spot Valheim Server"
+    user_data               = file("./scripts/bootstrap.sh")   
+}
+*/
+
