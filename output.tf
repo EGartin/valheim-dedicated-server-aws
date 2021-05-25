@@ -2,16 +2,9 @@
 * PROJECT: Valheim Dedicated Server
 * FILE: ROOT :: Output.tf
 * AUTHOR: Elijah Gartin [elijah.gartin@gmail.com]
-* DATE: 2021 MAR 01
+* DATE: 2021 MAY 25
 */
 
-
-output "public" {
+output "public_ip" {
     value = module.server.public_ip
 }
-
-/*
-output "public" {
-    value = module.spotserver.public_ip
-}
-*/

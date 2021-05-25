@@ -2,7 +2,7 @@
 
 ## Terraform
 
-### 2021 MARCH 05
+### 2021 MAY 25
 
 ## Disclaimer/Legal
 
@@ -14,7 +14,14 @@ This repository is to build a Valheim Dedicated Server from Amazon Web Services.
 
 Pulling from Ubuntu Server immutable images and a dynamic Valheim Build library created by ZeroBandwidth and associates. [Application Build Github](https://github.com/Nimdy/Dedicated_Valheim_Server_Script.git). 
 
-I do have some ambitions to try and create something like this for all the major cloud providers. All critiques are welcome via the Github Issue tracker or through discord.
+All critiques are welcome via the [Github Project](https://github.com/users/ElijahGartin/projects/2) or through [Discord](https://discord.gg/Trwr3Ty) in the Valheim or Science and Technology areas. To access those areas in discord, click on the :crossed-swords: and/or :rocket: emoji reactions to gain access to those respective channel groups in the #channel-picker after accepting the terms of service discord prompt.
+
+### Repositories
+
+[Valheim Terraform AWS](https://github.com/ElijahGartin/valheim-dedicated-server-aws)
+[Valheim Terraform Azure](https://github.com/ElijahGartin/valheim-dedicated-server-azure)
+[Valheim Terraform Google Cloud Platform](https://github.com/ElijahGartin/valheim-dedicated-server-gcp)
+[Valheim Terraform Digital Ocean](https://github.com/ElijahGartin/valheim-dedicated-server-digio)
 
 ## Prerequisites
 
@@ -24,7 +31,7 @@ I do have some ambitions to try and create something like this for all the major
       - EC2
       - VPC
       - S3
-  - [Terraform](https://www.terraform.io/downloads.html) (Tested on version 0.14.5)
+  - [Terraform](https://www.terraform.io/downloads.html) (Tested on version 0.15.4)
   - EC2 SSH Keypair
 
 ## Steps
@@ -33,17 +40,18 @@ You'll be editing some lines in the `ROOT:main.tf` file for the local variables 
 
 You'll notice some of the taxonomy in referring to files such as `ROOT:filename`.  Root will be the root of the folder structure. Any modules will change the name of `ROOT` to `NETWORK` for example where there is another grouping of similarily named files.  This is a Terraform thing that some people may not be familiar with.
 
-1. Use `curl https://ipinfo.io/ip` to obtain your IP and input it in the locals variable for `your_ip` in the `ROOT:main.tf`. This is essential for you to be able to SSH from your box.  If you intend to use a bastion host, make sure you're putting in the ip for the bastion host.
+1. `ROOT:main.tf`: Use `curl https://ipinfo.io/ip` to obtain your IP and input it in the locals variable for `your_ip`. This is essential for you to be able to SSH from your box.  If you intend to use a bastion host, make sure you're putting in the ip for the bastion host.
 
-2. Make sure you have a keypair already made in your `EC2 > Network & Security > Key Pairs` area so you can put the name of the key in the locals in `ROOT:main.tf`.  You don't need to include the .pem or .ppk extension.
+2. `ROOT:main.tf`: Make sure you have a keypair already made in your `EC2 > Network & Security > Key Pairs` area so you can put the name of the key in the locals.  You don't need to include the .pem or .ppk extension.
 
-3. Edit the `ROOT:provider.tf` file to choose the data center you want to deploy in. [AWS EndPoints](https://docs.aws.amazon.com/general/latest/gr/rande.html).  Input your API key here if you aren't going to push or share this code, otherwise save your credentials in a credential file or in your OS environment variables for security purposes. [Read more about Terraform and AWS credentials here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
+3. `ROOT:provider.tf`: Edit this file to choose the data center you want to deploy in. Input your API key here if you aren't going to push or share this code, otherwise save your credentials in a credential file or in your OS environment variables for security purposes.
+  - [AWS Data Centers](https://docs.aws.amazon.com/general/latest/gr/rande.html)
+  - [Read more about Terraform and AWS credentials here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 
-  - If you want to use the spot instance reduced cost configuration:
-    - In `ROOT:Main.tf` comment out the `module:server` block in  from lines 32 to 45. Subsequently, uncomment the `module:spotserver` right underneath it from lines 48 to 62.
-    - In `ROOT:output.tf` comment out lines 9 through 11 and uncomment lines 14-16
+4. If you want to use the spot instance reduced cost configuration:
+    - `ROOT:Main.tf` comment out the `module:server` block in  from lines 34 to 49. Subsequently, uncomment the `module:spotserver` right underneath it from lines 51 to 64.
 
-4. Once you've saved all your changes, open a terminal/command prompt to the location of this repository and run the following commands in succession:
+5. Once you've saved all your changes, open a terminal/command prompt to the location of this repository and run the following commands in succession:
   - `terraform init`
   - `terraform apply`
 
