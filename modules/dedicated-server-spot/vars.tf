@@ -2,14 +2,13 @@
 * PROJECT: Valheim Dedicated Server
 * FILE: DEDICATED-SERVER :: Vars.tf
 * AUTHOR: Elijah Gartin
-* DATE: 2021 MAR 05
+* DATE: 2021 MAY 25
 */
 
     variable "instance_type"    {}
     variable "volume_size"      {}
     variable "volume_type"      {}
     variable "subnet_id"        {}
-    #variable "private_ip"   {}
     variable "public_ip"    {
         default = "true"
     }
@@ -25,11 +24,5 @@
         default = ""
     }
     variable "user_data" {
-        default = ""
-    }
-    variable "user_data_base64" {
-        default = ""
-    }
-    variable "depends_id"   {
         default = ""
     }

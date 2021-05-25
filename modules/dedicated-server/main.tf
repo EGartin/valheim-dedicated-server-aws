@@ -2,7 +2,7 @@
 * PROJECT: Valheim Dedicated Server
 * FILE: DEDICATED-SERVER :: Main.tf
 * AUTHOR: Elijah Gartin [elijah.gartin@gmail.com]
-* DATE: 2021 MAR 05
+* DATE: 2021 MAY 25
 */
 
 /* EC2 Instance */
@@ -22,7 +22,6 @@ data "aws_ami" "latest-ubuntu" {
         values = ["hvm"]
     }
 }
-
 
 resource "aws_instance" "instance" {
     ami = data.aws_ami.latest-ubuntu.id
@@ -58,14 +57,3 @@ resource "aws_instance" "instance" {
         ]
     }
 }
-
- 
-#Dedicated IP 
-#EIP
-/*
-resource "aws_eip" "eip"{
-    vpc = true
-
-    instance = aws_instance.instance.id
-}
-*/

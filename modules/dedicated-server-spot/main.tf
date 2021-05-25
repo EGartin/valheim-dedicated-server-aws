@@ -2,7 +2,7 @@
 * PROJECT: Valheim Dedicated Server
 * FILE: DEDICATED-SERVER :: Main.tf
 * AUTHOR: Elijah Gartin
-* DATE: 2021 MAR 05
+* DATE: 2021 MAY 25
 */
 
 /* EC2 Instance */
@@ -28,7 +28,6 @@ resource "aws_spot_instance_request" "instance" {
     ami = data.aws_ami.latest-ubuntu.id
     instance_type = var.instance_type
     subnet_id = var.subnet_id
-    #private_ip = var.private_ip
     vpc_security_group_ids = var.security_groups
     key_name = var.key_name
     wait_for_fulfillment = true

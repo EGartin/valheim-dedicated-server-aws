@@ -2,7 +2,7 @@
 * PROJECT: Valheim Dedicated Server
 * FILE: DEDICATED-SERVER :: Output.tf
 * AUTHOR: Elijah Gartin
-* DATE: 2021 MAR 17
+* DATE: 2021 MAY 25
 */
 
 output "instance_id"    {
