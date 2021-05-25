@@ -18,10 +18,12 @@ All critiques are welcome via the [Github Project](https://github.com/users/Elij
 
 ### Repositories
 
-[Valheim Terraform AWS](https://github.com/ElijahGartin/valheim-dedicated-server-aws)
-[Valheim Terraform Azure](https://github.com/ElijahGartin/valheim-dedicated-server-azure)
-[Valheim Terraform Google Cloud Platform](https://github.com/ElijahGartin/valheim-dedicated-server-gcp)
-[Valheim Terraform Digital Ocean](https://github.com/ElijahGartin/valheim-dedicated-server-digio)
+| Repository  |
+| ----------- |
+| [Valheim Terraform AWS](https://github.com/ElijahGartin/valheim-dedicated-server-aws)     |
+| [Valheim Terraform Azure](https://github.com/ElijahGartin/valheim-dedicated-server-azure)   |
+| [Valheim Terraform Google Cloud Platform](https://github.com/ElijahGartin/valheim-dedicated-server-gcp)            |
+| [Valheim Terraform Digital Ocean](https://github.com/ElijahGartin/valheim-dedicated-server-digio)            |
 
 ## Prerequisites
 
