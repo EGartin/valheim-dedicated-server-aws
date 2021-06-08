@@ -7,21 +7,23 @@
 
 variable "env_type" {
     description = "Use your own tagging taxonomy to attach resources to specific environments. I.E. Production,Testing, QA, etc."
-    default = "TESTING"
+    default = "{YOUR ENVIRONMENT TAG HERE}"
 }
 
 variable "your_ip"  {
     description = "README.md :: Step 1: This must be your public facing IP so you can SSH to your linux machine. You can use the 'get-your-ip.sh' script and then end this variable in the vars.tf"
-    default     = ["83.136.182.238/32"]
+    default     = ["{YOUR PUBLIC IP HERE}/32"]
 }
 
 variable "keyname"  {
     description = "README.md :: Step 2: This is your keyname from your EC2 Console."
-    default = "TRG-STREAM-TEST"
+    default = "{YOUR KEYNAME HERE}"
 }
 
 variable "instance_type"    {
     description = "This the aws coded instance type for the server that will be built. For initial production, we'll use t3.medium. For testing, you can use a t3.micro."
+    # For Testing
+    #`t3.micro`
     default = "t3.medium"
 }
 

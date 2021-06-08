@@ -25,6 +25,7 @@ module "securitygroups" {
 /* BUILD SERVER SECTION*/
 #####!!!! ONLY HAVE ONE SERVER MODULE UNCOMMENTED AT A TIME !!!!#####
 ## This is for the more expensive on-demand server. Less worry about backups here, albeit you should still backup, fam.
+
 module "server" {
   source               = "./modules/dedicated-server"
   instance_type        = var.instance_type

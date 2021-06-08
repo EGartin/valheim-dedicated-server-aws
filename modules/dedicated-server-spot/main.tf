@@ -2,7 +2,7 @@
 * PROJECT: Valheim Dedicated Server
 * FILE: DEDICATED-SERVER :: Main.tf
 * AUTHOR: Elijah Gartin
-* DATE: 2021 MAY 25
+* DATE: 2021 JUN 08
 */
 
 /* EC2 Instance */
@@ -14,7 +14,7 @@ data "aws_ami" "latest-ubuntu" {
 
     filter {
         name = "name"
-        values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
+        values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
     }
 
     filter {
