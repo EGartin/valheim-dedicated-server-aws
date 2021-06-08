@@ -20,3 +20,17 @@ variable "keyname"  {
     default = "TRG-STREAM-TEST"
 }
 
+variable "instance_type"    {
+    description = "This the aws coded instance type for the server that will be built. For initial production, we'll use t3.medium. For testing, you can use a t3.micro."
+    default = "t3.medium"
+}
+
+variable "volume_size"  {
+    description = "This will be the size of your root disk."
+    default = "30"
+}
+
+variable "volume_type"  {
+    description = "This is the class of storage. We'll use gp2 as it is a general class of storage that is cheaper than higher i/o storage."
+    default = "gp2"
+}
