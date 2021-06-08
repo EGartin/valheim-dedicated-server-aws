@@ -2,7 +2,7 @@
 * PROJECT: Valheim Dedicated Server
 * FILE: ROOT :: Provider.tf
 * AUTHOR: Elijah Gartin [elijah.gartin@gmail.com]
-* DATE: 2021 MAY 25
+* DATE: 2021 JUN 08
 */
 
 provider "aws" {
